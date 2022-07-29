@@ -8,7 +8,8 @@ Core rover domain includes the following:
     Definitions for Difference Rewards and D++ Rewards in reward_functions.py 
     A basic fully connected, feedforward neural network for rovers in rover_neural_network.py 
     A basic CCEA with several selection strategies in ccea.py 
-    Typical parameters used for test setup in parameters.py Supporting functions in global_functions.py 
+    Typical parameters used for test setup in parameters.py 
+    Supporting functions in global_functions.py 
     A script that creates a rover domain environment with specified numbers of POI and Roves in create_world.py 
     An example of how to setup the rover domain and run it to collect data in rover_domain_example.py.
 
