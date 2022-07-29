@@ -1,7 +1,8 @@
 # AADI-Rover-Domain
 Repository for core AADI rover domain. The rover domain runs as an AI gym style environment. The "step" function in the rover domain takes in rover actions from the neural networks and returns the next state and the global reward for that state. Rover actions are formatted as an array that is (n x a) where n is the number of rovers and a is the number of action outputs from the network. The global reward output at each step is an array showing the reward returned by each POI. This array is (p x 1) where p is the number of POI in the environment.
 
-Core rover domain includes the following: 
+Core rover domain includes the following:
+
     Rover and POI class definitions in agent.py 
     Rover Domain environment class (which includes global reward function) in rover_domain.py 
     Definitions for Difference Rewards and D++ Rewards in reward_functions.py 
