@@ -10,7 +10,7 @@ Core rover domain includes the following:
     A basic CCEA with several selection strategies in ccea.py 
     Typical parameters used for test setup in parameters.py 
     Supporting functions in global_functions.py 
-    A script that creates a rover domain environment with specified numbers of POI and Roves in create_world.py 
+    A script that creates a rover domain environment with specified numbers of POI and Rovers in create_world.py 
     An example of how to setup the rover domain and run it to collect data in rover_domain_example.py.
 
 To get started:
