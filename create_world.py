@@ -339,4 +339,4 @@ if __name__ == '__main__':
             rover_path[0:p["stat_runs"], rover_id, step, 2] = rd.rovers["R{0}".format(rover_id)].loc[2]
 
     create_pickle_file(rover_path, "Output_Data/", "Rover_Paths")
-    run_visualizer()
+    # run_visualizer()

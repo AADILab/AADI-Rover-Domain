@@ -6,6 +6,7 @@ import numpy as np
 from parameters import parameters as p
 from global_functions import create_csv_file, save_best_policies
 import time
+from tqdm import tqdm
 
 
 def sample_best_team(rd, pops, networks):
@@ -60,6 +61,7 @@ def rover_global():
 
     # Perform runs
     run_times = []
+    pbar = tqdm(total=p["stat_runs"]*p["generations"])
     srun = p["starting_srun"]
     while srun < p["stat_runs"]:
         start_time = time.time()
@@ -104,6 +106,9 @@ def rover_global():
                     policy_id = int(pops["EA{0}".format(rover_id)].team_selection[team_number])
                     pops["EA{0}".format(rover_id)].fitness[policy_id] = g_reward
 
+            # Update progress bar
+            pbar.update(1)
+
             # Testing Phase (sample best agent team found so far) ----------------------------------------------------
             if gen % p["sample_rate"] == 0 or gen == p["generations"] - 1:
                 reward_history.append(sample_best_team(rd, pops, networks))
@@ -125,6 +130,7 @@ def rover_global():
         run_times.append(end_time - start_time)
 
     create_csv_file(run_times, "Output_Data/", "GlobalRunTimes.csv")
+    pbar.close()
 
 
 def rover_difference():
