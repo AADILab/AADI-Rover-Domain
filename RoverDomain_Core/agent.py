@@ -1,7 +1,7 @@
 import numpy as np
 import sys
-from parameters import parameters as p
-from global_functions import get_linear_dist, get_squared_dist, get_angle
+from Rover_Domain_Examples.parameters import parameters as p
+from Rover_Domain_Examples.global_functions import get_linear_dist, get_squared_dist, get_angle
 
 
 class Poi:

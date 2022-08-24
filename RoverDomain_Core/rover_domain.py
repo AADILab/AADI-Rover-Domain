@@ -1,7 +1,7 @@
 import numpy as np
 import csv
 import copy
-from parameters import parameters as p
+from Rover_Domain_Examples.parameters import parameters as p
 from RoverDomain_Core.agent import Poi, Rover
 
 
